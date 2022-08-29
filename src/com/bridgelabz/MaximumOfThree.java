@@ -67,14 +67,33 @@ public class MaximumOfThree {
 		
 		System.out.println("The maximum Three Character is: " + maximumChar);
 	}
-	
+
+	/*
+	 * UC4 : Refactor all the 3 to one generic method and find the maximum.
+	 */
+	public static <T extends Comparable<T>> void findMax(T firstNumber, T secondNumber, T thirdNumber) {
+		T maximumNumber;
+		
+		if(firstNumber.compareTo(secondNumber)>0 && firstNumber.compareTo(thirdNumber)>0) {
+			maximumNumber = firstNumber;
+		}
+		else if(secondNumber.compareTo(firstNumber)>0 && secondNumber.compareTo(thirdNumber)>0) {
+			maximumNumber = secondNumber;
+		}
+		else {
+			maximumNumber = thirdNumber;
+		}
+		System.out.println("The maximum is: " + maximumNumber);
+	}
+
 		public static void main(String[] args) {
 
 			System.out.println("*** Welcome To Computing Maximum Of Three Numbers Using Java Generics ***");
 			
 			Scanner sc = new Scanner(System.in);
 			do {
-			System.out.println("Enter a choice : \n 1.Max OF Three Integers \n 2.Max Of Three Floats \n 3.Max OF Three Characters \n 4.Exit ");
+			System.out.println("Enter a choice : \n 1.Max OF Three Integers \n 2.Max Of Three Floats \n 3.Max OF Three Characters "
+					+ "\n 4.Max Of three using generics method \n 5.Exit ");
 			num = sc.nextInt();
 			switch(num) {
 			case 1:
@@ -86,10 +105,16 @@ public class MaximumOfThree {
 			case 3:
 				findMaximum(firstChar,secondChar,thirdChar);
 				break;
+			case 4:
+				System.out.println("*** Using Generics ***");
+				findMax(firstNumber ,secondNumber,thirdNumber);
+				findMax(firstNum,secondNum,thirdNum);
+				findMax(firstChar,secondChar,thirdChar);
+				break;
 			default :
 				System.exit(0);
 			}
-		}while(num != 4);
+		}while(num != 5);
 		sc.close();
 		}
 	}
