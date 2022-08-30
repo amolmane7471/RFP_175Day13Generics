@@ -35,11 +35,11 @@ public class MaxTestMain {
         System.out.println("enter fourth string: ");
         String stringFourth = sc.next();
         /*
-         * call maximum method using class name and passing 4 parameters.
+         * call toPrintMax method using class name and passing 4 parameters.
          */
-        System.out.println("The Maximum Integer Number is: " + MaximumTest.maximum(intFirst,intSecond,intThird,intfourth));	
-		System.out.println("The Maximum Float Number is: " + MaximumTest.maximum(floatFirst, floatSecond, floatThird,floatfourth));
-		System.out.println("The Maximum String is: " + MaximumTest.maximum(stringFirst, stringSecond,stringThird,stringFourth));
+        System.out.println("The Maximum Integer Number is: " + MaximumTest.toPrintMax(intFirst,intSecond,intThird,intfourth));	
+		System.out.println("The Maximum Float Number is: " + MaximumTest.toPrintMax(floatFirst, floatSecond, floatThird,floatfourth));
+		System.out.println("The Maximum String is: " + MaximumTest.toPrintMax(stringFirst, stringSecond,stringThird,stringFourth));
 	
 
 	}
