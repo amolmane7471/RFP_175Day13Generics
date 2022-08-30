@@ -69,7 +69,7 @@ public class MaximumOfThree {
 	}
 
 	/*
-	 * UC4 : Refactor all the 3 to one generic method and find the maximum.
+	 *  Refactor 1 : all the 3 to one generic method and find the maximum.
 	 */
 	public static <T extends Comparable<T>> void findMax(T firstNumber, T secondNumber, T thirdNumber) {
 		T maximumNumber;
