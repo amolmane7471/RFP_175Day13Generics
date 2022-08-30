@@ -1,16 +1,16 @@
 package com.bridgelabz;
 /*
- * purpose : UC4 : to create Generic Class to take in 4 variables of Generic Type.
+ * purpose : UC5 : Extend the max method to also print the max to std out using Generic Method
  * @author : Amol
  * since : 2022/08/30
  */
 public class MaximumTest<T extends Comparable<T>> {
 	
 		/*
-		 * create MaximumTest parameterised constructor with 4 parameters
+		 * create toPrintMax method  with 4 parameters
 		 */
 		
-		public static <E extends Comparable<E>> E maximum(E firstVariable,E secondVariable,E thirdVariable,E fourthVariable) {
+		public static <E extends Comparable<E>> E toPrintMax(E firstVariable,E secondVariable,E thirdVariable,E fourthVariable) {
 			E max = firstVariable;
 			if(secondVariable.compareTo(max) > 0)
 			{
@@ -27,6 +27,8 @@ public class MaximumTest<T extends Comparable<T>> {
 			return max;
 		}
 
-
+		 public static <E> void printMax(E firstVariable,E secondVariable,E thirdVariable,E fourthVariable, E max){
+		        System.out.println(max);
+		    }
 	
 }
