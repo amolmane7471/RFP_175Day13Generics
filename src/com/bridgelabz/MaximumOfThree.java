@@ -85,7 +85,7 @@ public class MaximumOfThree {
 		}
 		System.out.println("The maximum is: " + maximumNumber);
 	}
-
+	
 		public static void main(String[] args) {
 
 			System.out.println("*** Welcome To Computing Maximum Of Three Numbers Using Java Generics ***");
